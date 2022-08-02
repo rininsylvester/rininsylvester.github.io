@@ -1,0 +1,5 @@
+JS , Solidity , C#
+<b>Frameworks / Libraries / Run Env</b> : React.js , Spring Boot , ether.js , Node.js ,JQuery , Hardhat<br>
+PostgreSQL
+Splunk , Burp Suite , MetaSploit , Snort
+<b>DevOps Tools</b> : Jenkins, CI/CD , Docker , Kubernetes<br>
