@@ -11,7 +11,7 @@
     --text-color: #e0e0e0;
     --accent-color: #64B5F6;
     --hover-color: #90CAF9;
-    --section-bg: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+    --section-bg: transparent;
   }
   
   body {
@@ -58,22 +58,15 @@
     font-size: 22px;
     font-weight: 600;
     color: #FFFFFF;
-    background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
-    padding: 10px 20px;
-    border-radius: 15px;
-    margin: 40px 0 20px;
+    background: none;
+    padding: 0 0 16px 0;
+    border-radius: 0;
+    margin: 48px 0 24px 32px;
     position: relative;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-  }
-  sectionheading::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    animation: glow 2s linear infinite;
+    box-shadow: none;
+    display: block;
+    text-align: left;
+    letter-spacing: 0.5px;
   }
   pageheading {
     font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
@@ -83,10 +76,10 @@
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   }
   table {
-    background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+    background: none;
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: none;
     margin: 30px 0;
   }
   img {
@@ -120,7 +113,7 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="30">
   <p align="center">
     <pageheading>Rinin Sylvester Louis Amalraj</pageheading><br>
-    Chennai , Tamil Nadu , India <img src="images/canada.png" width="2.2%" align="center"><br>
+    Chennai, Tamil Nadu, India <img src="images/india.png" width="2.2%" align="center" alt="Indian Flag"><br>
     <b>email</b>: <a href="mailto:l.rininsylvester@gmail.com">rininsylvester@yahoo.com</a><br>
     <font id="email" style="display:inline;">
       <noscript><i>Please enable Javascript to view</i></noscript>
@@ -128,12 +121,14 @@
   </p>
 
   <tr>
-    <td width="34%" valign="top"><!--<a href="images/pfp.jpg">--><img src="images/dp.jpg" width="100%" border = "1.5px solid #555" style="border-radius:20px" id="profile-pic"></a>
-        <p align=center>
-          | 
-          <a href="link">Github</a> |
-          <a href="https://www.linkedin.com/in/rininsylvester/">LinkedIn</a> |
-      </p>
+    <td width="34%" valign="top" align="center">
+  <div class="profile-pic-wrapper">
+    <img src="images/dp.png" alt="Rinin Sylvester Louis Amalraj" class="profile-pic">
+  </div>
+  <div class="profile-links">
+    <a href="link">Github</a> |
+    <a href="https://www.linkedin.com/in/rininsylvester/">LinkedIn</a>
+  </div>
     </td>
 
     <td width="66%" valign="top" align="justify">
@@ -160,193 +155,268 @@
 
 <!-- =================== Experience =================== -->
 <table width="100%" align="center" style="margin: 40px 0 20px 10px" cellspacing="0" cellpadding="0" border="0">
-    <tr>
-
-      <th width="16.6%" valign="top" align="center">
-        <img src="images/walmart.png" alt="sym" width="35%" border = "1.5px solid #555" style="border-radius:15px" ></a>
-        <p style="line-height:1.3; font-size:12pt">Walmart Canada<br>Manager - Customer Success<br>June. 2024 - April 2025</p>
-        </th>
-
-      <th width="16.6%" valign="top" align="center">
-        <img src="images/confed.png" alt="sym" width="35%" border = "1.5px solid #555" style="border-radius:15px" ></a>
-        <p style="line-height:1.3; font-size:12pt">Confederation College<br>Postgraduate Degree , Information Communication Technology<br>May. 2022 - Feb 2024</p>
-        </th>
- 
-
-        <th width="16.7%" valign="top" align="center">
-        <img src="images/TechM.jpg" alt="sym" width="35%" border = "1.5px solid #555" style="border-radius:15px"></a>
-        
-        <p style="line-height:1.3; font-size:12pt">Tech Mahindra<br>Manager - Presales and Data Analytics<br>Jan. 2021 - Jan. 2022</p>
-        </th>
-
-        <th width="16.7%" valign="top" align="center">
-          <img src="images/licet-logo.png" alt="sym" width="35%" border = "1.5px solid #555" style="border-radius:15px"></a>
-          
-          <p style="line-height:1.3; font-size:12pt">Loyola - ICAM College of Engineering and Technology<br>Bachelor's in Computer Science and Engineering<br>Jun. 2016 - July. 2020</p>
-          </th>
+  <tr>
+    <th width="25%" valign="top" align="center">
+      <img src="images/walmart.png" alt="Walmart" width="35%" style="border-radius:15px; border: 1.5px solid #555;">
+      <div class="exp-title">Walmart Canada</div>
+      <div class="exp-role">Manager - Customer Success</div>
+      <div class="exp-date">June 2024 - April 2025</div>
+    </th>
+    <th width="25%" valign="top" align="center">
+      <img src="images/confed.png" alt="Confederation College" width="35%" style="border-radius:15px; border: 1.5px solid #555;">
+      <div class="exp-title">Confederation College</div>
+      <div class="exp-role">Postgraduate Degree, ICT</div>
+      <div class="exp-date">May 2022 - Feb 2024</div>
+    </th>
+    <th width="25%" valign="top" align="center">
+      <img src="images/TechM.jpg" alt="Tech Mahindra" width="35%" style="border-radius:15px; border: 1.5px solid #555;">
+      <div class="exp-title">Tech Mahindra</div>
+      <div class="exp-role">Manager - Presales and Data Analytics</div>
+      <div class="exp-date">Jan 2021 - Jan 2022</div>
+    </th>
+    <th width="25%" valign="top" align="center">
+      <img src="images/licet-logo.png" alt="LICET" width="35%" style="border-radius:15px; border: 1.5px solid #555;">
+      <div class="exp-title">LICET</div>
+      <div class="exp-role">B.E. Computer Science</div>
+      <div class="exp-date">Jun 2016 - Jul 2020</div>
+    </th>
+  </tr>
+</table>
 
 
     <table width="100%" align="center" border="0" cellpadding="20" style="margin-top: 30px">
-      <tr>
-        <td>
-          <sectionheading>&nbsp;&nbsp;Work Experience</sectionheading>
-            <ul>
-              <li><b>Walmart Canada : Manager - Customer Success</b><br>
-                <b>Full-Time</b> - June 2024 – April 2025<br>
-            
-            • Led a 10+ member customer service team, implementing coaching frameworks that boosted customer satisfaction scores by 15%.<br>
-            • Optimized daily operations through automated reporting dashboards in Excel macros and Power BI, increasing service efficiency by 22%.<br>
-            • Implemented compliance monitoring processes, leveraging cash flow reconciliation methodologies, reducing operational discrepancies by 18%.<br>
-            • Managed escalated service issues and coordinated with internal systems to ensure real-time resolution<br>
-            • Communicated effectively with cross-departmental teams to investigate issues and document resolutions for future reference<br>
-            • Balanced multiple service queues, tracking performance KPIs. <br>
-
-            <br>
-
-            <li><b>TConfederation College : Technical Product Manager - Founding Engineer </b></li>
-            <b>Co-Op Academic</b> - May 2023 – Dec 2023<br>
-
-          •Lead the design and development of a digital platform aimed at connecting clients with skilled tradespeople, delivering a seamless user experience<br>
-          •Defined product features, user flows, and functionality based on stakeholder input and user research, ensuring alignment with market needs.<br>
-          •Supported and shadowed various managerial and business development activities.<br>
-          •Collaborated cross-functionally with a team of developers and designers to reduce platform latency by 40%, directly enhancing user engagement and retention<br>
-    </ul>
-              <li><b>Tech Mahindra : Software Engineering & Management- Pursuits , Design & Automation</b><br>
-                    <b>Full-Time</b> - Apr 2021 – Jan 2022<br>
-                
-                • Supported bids and proposals for enterprise-level banking/telecom clients, collaborating with cross-functional tech teams to scope deliverables and SLAs contributing to $5M + USD in revenue..<br>
-                • Built interactive data analytics dashboards in Power BI, automating bid tracking and improving decision-making efficiency by 20%<br>
-                • Gained exposure to application support cycles, incident management tools, and documentation best practices.<br>
-                • Drafted technical solution documentation and architecture flowcharts using Visio, ensuring accurate stakeholder communication<br>
-                • Have been involved in various automations and have developed bots using UiPath – Robotic Process Automation.<br>
-                • Participated in client calls to clarify requirements, offering strong communication and issue-triage skills transferable to production environments<br>
-         
-        </td>
-      </tr>
-    </table>
-
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-        <tr><td><sectionheading>&nbsp;&nbsp;Projects</sectionheading></td></tr>
-</table>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
-
-
   <tr>
-    <td width="50%" valign="top" align="center">
-        <!--<a href="#">-->
-        
-        <img src="images/hashiras.png" alt="sym" width="350" height="200" border = "1.5px solid #555" style="border-radius:15px"></a>
+    <td>
+      <div class="main-section" id="workexp">
+  <sectionheading>Work Experience</sectionheading>
+      <div class="work-experience">
+        <div class="exp-block">
+          <div class="exp-header">Walmart Canada <span class="exp-role">Manager - Customer Success</span> <span class="exp-date">June 2024 – April 2025</span></div>
+          <ul>
+            <li>Led a 10+ member customer service team, implementing coaching frameworks that boosted customer satisfaction scores by 15%.</li>
+            <li>Optimized daily operations through automated reporting dashboards in Excel macros and Power BI, increasing service efficiency by 22%.</li>
+            <li>Implemented compliance monitoring processes, leveraging cash flow reconciliation methodologies, reducing operational discrepancies by 18%.</li>
+            <li>Managed escalated service issues and coordinated with internal systems to ensure real-time resolution.</li>
+            <li>Communicated effectively with cross-departmental teams to investigate issues and document resolutions for future reference.</li>
+            <li>Balanced multiple service queues, tracking performance KPIs.</li>
+          </ul>
+        </div>
+        <div class="exp-block">
+          <div class="exp-header">Confederation College <span class="exp-role">Technical Product Manager - Founding Engineer</span> <span class="exp-date">May 2023 – Dec 2023</span></div>
+          <ul>
+            <li>Lead the design and development of a digital platform aimed at connecting clients with skilled tradespeople, delivering a seamless user experience.</li>
+            <li>Defined product features, user flows, and functionality based on stakeholder input and user research, ensuring alignment with market needs.</li>
+            <li>Supported and shadowed various managerial and business development activities.</li>
+            <li>Collaborated cross-functionally with a team of developers and designers to reduce platform latency by 40%, directly enhancing user engagement and retention.</li>
+          </ul>
+        </div>
+        <div class="exp-block">
+          <div class="exp-header">Tech Mahindra <span class="exp-role">Manager - Presales and Data Analytics</span> <span class="exp-date">Apr 2021 – Jan 2022</span></div>
+          <ul>
+            <li>Supported bids and proposals for enterprise-level banking/telecom clients, collaborating with cross-functional tech teams to scope deliverables and SLAs contributing to $5M+ USD in revenue.</li>
+            <li>Built interactive data analytics dashboards in Power BI, automating bid tracking and improving decision-making efficiency by 20%.</li>
+            <li>Gained exposure to application support cycles, incident management tools, and documentation best practices.</li>
+            <li>Drafted technical solution documentation and architecture flowcharts using Visio, ensuring accurate stakeholder communication.</li>
+            <li>Developed bots using UiPath – Robotic Process Automation.</li>
+            <li>Participated in client calls to clarify requirements, offering strong communication and issue-triage skills transferable to production environments.</li>
+          </ul>
+        </div>
+      </div>
     </td>
-
-    <td width="50%" valign="top">
-        <p>
-           <!---- <a href="https://github.com/yccyenchicheng/pytorch-VideoVAE" id="PYTORCHVIDEOVAE"> -->
-         
-            <heading>The Hashiras - The eSports Collective</heading></a>
-            <br>
-            A front end design that acts as a bridge for all eSports shenanigans.<br>
-            Tech Stack(s) : HTML , CSS and JS
-            <br>
-            
-        </p>
-
-    </td>
-</tr>
-
-<tr>
-  <td width="50%" valign="top" align="center">
-      <!--<a href="#">-->
-      
-      <img src="images/uipath.png" alt="sym" width="350" height="200" border = "1.5px solid #555" style="border-radius:15px"></a>
-  </td>
-
-  <td width="50%" valign="top">
-      <p>
-         <!---- <a href="https://github.com/yccyenchicheng/pytorch-VideoVAE" id="PYTORCHVIDEOVAE"> -->
-       
-          <heading>Legals Audit BOT</heading></a>
-          <br>
-          Created a UiPath bot that automates legal document audits, reducing audit time by 50% and improving accuracy by achieving a 98% error-free audit rate..<br>
-          Tech Stack(s) : UiPath RPA
-          <br>
-          
-      </p>
-
-  </td>
-</tr>
-
-    <tr>
-        <td width="50%" valign="top" align="center">
-            <!--<a href="#">-->
-            
-            <img src="images/s3.jpg" alt="sym" width="350" height="200" border = "1.5px solid #555" style="border-radius:15px"></a>
-        </td>
-
-        <td width="50%" valign="top">
-            <p>
-               <!---- <a href="https://github.com/yccyenchicheng/pytorch-VideoVAE" id="PYTORCHVIDEOVAE"> -->
-             
-                <heading>Klutch Internal Hook - Game Engine</heading></a>
-                <br>
-                Used a open source program and fixed its core working by updating offsets to provide cutting edge aesthetics to the gameplay.<br>
-                Tech Stack(s) : C++ 
-                <br>
-                <!--| <a href="link">source</a> |-->
-            </p>
-
-        </td>
-    </tr>
-
-    <tr>
-        <td width="50%" valign="top" align="center">
-             <!--<a href="#">-->
-            
-            <img src="images/s4.png" alt="sym" width="350" height="200" border = "1.5px solid #555" style="border-radius:15px"></a>
-        </td>
-
-        <td width="50%" valign="top">
-            <p>
-                <!--<a href="https://github.com/yccyenchicheng/pytorch-SegInpaint" id="PYTORCHSEGINPAINT"> -->
-               
-                <heading>Minimalist ERP System</heading></a>
-                <br>
-                Simple and elegant system to manage student details of a educational institute <br>
-                Tech Stack(s) : JS , HTML , CSS and MySQL. 
-                <br>
-                <!--| <a href="link">source</a> |-->
-            </p>
-    
-        </td>
-    </tr>
-
-    <tr>
-      <td width="50%" valign="top" align="center">
-              <!--<a href="#">-->
-          
-          <img src="images/s5.jpg" alt="sym" width="350" height="200"  border = "1.5px solid #555" style="border-radius:15px"></a>
-      </td>
-
-      <td width="50%" valign="top">
-          <p>
-              <!--<a href="https://github.com/yccyenchicheng/pytorch-SegInpaint" id="PYTORCHSEGINPAINT"> -->
-             
-              <heading>FPS Unlocker - Game Engine</heading></a>
-              <br>
-              A portable tool that uses minimal cpu resources to unlock the capped in-game frames per second for a smoother gameplay <br>
-              Tech Stack(s) : C#. 
-              <br>
-               <!--| <a href="link">source</a> |-->
-          </p>
-  
-      </td>
   </tr>
+</table>
+<style>
+.work-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+.exp-block {
+  background: none;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: none;
+}
+.exp-header {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+.exp-role {
+  font-weight: 400;
+  color: var(--text-color);
+  margin-left: 10px;
+}
+.exp-date {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-left: auto;
+}
+@media (max-width: 900px) {
+  .work-experience { gap: 20px; }
+  .exp-block { padding: 12px; }
+  .exp-header { font-size: 16px; }
+}
+</style>
+
+
+</div>
+<div class="main-section" id="projects">
+  <sectionheading>Projects</sectionheading>
+  <div class="projects-section">
+  <div class="projects-grid">
+  <div class="project-card">
+    <img src="images/hashiras.png" alt="The Hashiras - The eSports Collective">
+    <div class="project-content">
+      <div class="project-title">The Hashiras - The eSports Collective</div>
+      <div class="project-desc">A front-end design that acts as a bridge for all eSports shenanigans.</div>
+      <div class="project-stack">HTML, CSS, JS</div>
+    </div>
+  </div>
+  <div class="project-card">
+    <img src="images/uipath.png" alt="Legals Audit BOT">
+    <div class="project-content">
+      <div class="project-title">Legals Audit BOT</div>
+      <div class="project-desc">UiPath bot that automates legal document audits, reducing audit time by 50% and achieving 98% accuracy.</div>
+      <div class="project-stack">UiPath RPA</div>
+    </div>
+  </div>
+  <div class="project-card">
+    <img src="images/s3.jpg" alt="Klutch Internal Hook - Game Engine">
+    <div class="project-content">
+      <div class="project-title">Klutch Internal Hook - Game Engine</div>
+      <div class="project-desc">Fixed and updated an open-source game engine, providing cutting-edge aesthetics to gameplay.</div>
+      <div class="project-stack">C++</div>
+    </div>
+  </div>
+  <div class="project-card">
+    <img src="images/s4.png" alt="Minimalist ERP System">
+    <div class="project-content">
+      <div class="project-title">Minimalist ERP System</div>
+      <div class="project-desc">Simple and elegant system to manage student details for educational institutes.</div>
+      <div class="project-stack">JS, HTML, CSS, MySQL</div>
+    </div>
+  </div>
+  <div class="project-card">
+    <img src="images/s5.jpg" alt="FPS Unlocker - Game Engine">
+    <div class="project-content">
+      <div class="project-title">FPS Unlocker - Game Engine</div>
+      <div class="project-desc">A portable tool that unlocks capped in-game FPS for smoother gameplay using minimal CPU resources.</div>
+      <div class="project-stack">C#</div>
+    </div>
+  </div>
+</div>
+</div>
+<style>
+.projects-section {
+  margin: 0 auto 40px auto;
+  padding: 30px 0 0 0;
+  max-width: 1200px;
+  background: none;
+}
+.projects-section sectionheading {
+  display: block;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.profile-pic-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 24px rgba(100,181,246,0.12);
+  transition: transform 0.2s;
+}
+.profile-pic:hover {
+  transform: scale(1.04) rotate(-2deg);
+}
+.profile-links {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin: 30px 0 40px 0;
+}
+.project-card {
+  background: none;
+  border-radius: 18px;
+  box-shadow: none;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 6px 32px rgba(100,181,246,0.18);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #222;
+}
+.project-content {
+  padding: 18px 20px 14px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.project-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 7px;
+}
+.project-desc {
+  font-size: 15px;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+.project-stack {
+  font-size: 13px;
+  color: #b0b0b0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+@media (max-width: 1100px) {
+  .projects-grid { gap: 22px; }
+  .project-card { width: 90vw; max-width: 340px; }
+}
+@media (max-width: 700px) {
+  .projects-grid { flex-direction: column; align-items: center; }
+  .project-card { width: 98vw; max-width: 360px; }
+}
+</style>
 
 
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="8">
   <tr><td>
-    <sectionheading>&nbsp;&nbsp;Certifications & Courses</sectionheading>
+    </div>
+<div class="main-section" id="certifications">
+  <sectionheading>Certifications & Courses</sectionheading>
     <ul>
       <li><b>UiPath</b> - RPA Starter</li>
       <li><b>UiPath</b> - RPA Developer Role</li> 
@@ -365,9 +435,13 @@
 <table width="100%" align="center" border="0" cellpadding="20" style="margin-top: 30px">
   <tr>
     <td>
-      <sectionheading>&nbsp;&nbsp;Awards</sectionheading>
+      </div>
+<div class="main-section" id="awards">
+  <sectionheading>Awards</sectionheading>
         <ul>
           <li> Pat on the back - Awarded for the best performance at Tech Mahindra </li>
+          <li> Shining Star of The Month - Awarded for the best performance at Walmart Canada </li>
+
         </ul>
     </td>
   </tr>
@@ -376,12 +450,94 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="30">
     <tr><td><br><p align="center"><font size="2">
     Crafted by Rinin Sylvester Louis Amalraj<br>
-    Powered by <a href="https://jonbarron.info/">Jon Barron</a>.<br>
+    
     </font></p></td></tr>
     
 </table>
   </td> </tr>
 </table>
+</div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top">↑</button>
+
+<script>
+// Smooth scroll for anchor links
+const links = document.querySelectorAll('a[href^="#"]');
+for (const link of links) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({behavior: 'smooth'});
+  });
+}
+// Back to Top button
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', function() {
+  backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+backToTop.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+// Fade-in on scroll
+const sections = document.querySelectorAll('.main-section');
+const fadeInOnScroll = () => {
+  const trigger = window.innerHeight * 0.92;
+  sections.forEach(sec => {
+    const secTop = sec.getBoundingClientRect().top;
+    if (secTop < trigger) sec.classList.add('fade-in');
+  });
+};
+window.addEventListener('scroll', fadeInOnScroll);
+window.addEventListener('DOMContentLoaded', fadeInOnScroll);
+</script>
+<style>
+.main-section {
+  max-width: 900px;
+  margin: 0 auto 56px auto;
+  padding: 0 18px 0 18px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.main-section.fade-in {
+  opacity: 1;
+  transform: none;
+}
+sectionheading {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 44px;
+  margin-bottom: 22px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: left;
+  display: block;
+}
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.17);
+  cursor: pointer;
+  opacity: 0.82;
+  transition: opacity 0.2s, background 0.2s;
+}
+#backToTop:hover {
+  opacity: 1;
+  background: var(--hover-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+</style>
 
 
 <script xml:space="preserve" language="JavaScript">
